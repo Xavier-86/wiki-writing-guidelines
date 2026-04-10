@@ -11,14 +11,52 @@ Guidelines for creating and maintaining a well-structured Memory Wiki.
 
 This skill provides standards and workflows for building organized, cross-referenced knowledge wikis using Obsidian-compatible markdown files.
 
+## Session Startup - Wiki 初始化检查
+
+每次会话开始时，智能体应执行以下检查：
+
+1. **检查 wiki 文件夹是否存在**
+   - 路径：`wiki/` (相对工作目录)
+   - 如果不存在，询问用户："需要我帮你创建 wiki 知识库文件夹吗？"
+
+2. **检查 wiki 结构是否完整**
+   - 至少应有 `wiki/README.md`
+   - 如果没有，主动创建基础结构
+
+3. **加载工作模式**
+   - 查阅 `MEMORY.md` 了解用户的 wiki 使用偏好
+   - 明确记录模式：**主动询问制**
+
+## 知识捕获工作流 (主动询问制)
+
+**核心原则**：在对话中遇到有价值的技术内容时，**主动询问**用户"这个要记到 wiki 吗？"
+
+### 触发条件
+
+以下情况应主动询问用户是否记录 wiki：
+
+| 场景 | 示例 |
+|------|------|
+| 系统配置步骤 | "conda 环境配置流程" |
+| 故障排查方案 | "解决 xxx 错误的方法" |
+| 最佳实践总结 | "推荐的项目结构是..." |
+| 工具使用技巧 | "可以这样用 git rebase..." |
+| 重要决策记录 | "我们决定采用 xxx 方案因为..." |
+
+### 询问话术
+
+> "刚才我们讨论的 [主题] 很有价值，要记到 wiki 里吗？方便以后查阅。
+
 ## When to Use This Skill
 
 Use this skill when:
+- **Session startup**: Checking and initializing wiki folder structure
 - Creating a new wiki page or knowledge base entry
 - Organizing wiki structure and file hierarchy
 - Maintaining wiki indexes (__index.md, README.md)
 - Establishing wiki conventions for a project or team
 - Adding a new page and need to update related indexes
+- **Knowledge capture**: Asking user if valuable technical content should be recorded
 
 ## File Organization
 
